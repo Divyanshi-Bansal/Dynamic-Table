@@ -16,7 +16,10 @@ export default function UserData(){
                 Email:email.value,
                 password:pwd.value
             }
-            setUsers(users.concat(data))
+            setUsers(users.concat(data));
+            name.value = '';
+            email.value = '';
+            pwd.value = '';
         }
         else{
             alert("enter values first!!");
@@ -47,12 +50,16 @@ export default function UserData(){
                         <th>Email-id</th>
                         <th>Password</th>
                     </tr>
-                    <tr>
-                        <td>Sr</td>
-                        <td>Username</td>
-                        <td>Email</td>
-                        <td>password</td>
-                    </tr>
+                    {users.map(data =>{
+                        return(
+                            <tr>
+                                <td>data.Sr</td>
+                                <td>data.Username</td>
+                                <td>data.Email</td>
+                                <td>data.password</td>
+                            </tr>
+                        );
+                    })}
                 </tbody>
             </table>
 
