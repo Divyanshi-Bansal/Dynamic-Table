@@ -4,7 +4,19 @@ export default function UserData(){
 
     const [users , setUsers] = useState([]);
 
-    const addData = () => {};
+    const addData = () => {
+        let name = document.getElementById('name');
+        let email = document.getElementById('email');
+        let pwd = document.getElementById('pwd');
+
+        if(name.value != '' && email.value != '' && pwd.vaue != ''){
+
+        }
+        else{
+            alert("enter values first!!");
+        }
+
+    };
 
     return(
         <div className='container'>
@@ -15,9 +27,9 @@ export default function UserData(){
                 <h3>Username:</h3>
                 <input type='text' id='name'/>
                 <h3>Email ID:</h3>
-                <input type='text' id='name'/>
+                <input type='text' id='email'/>
                 <h3>Password:</h3>
-                <input type='password' id='name'/>
+                <input type='password' id='pwd'/>
                 <button onClick='addData()'>Submit</button>
             </div>
 
