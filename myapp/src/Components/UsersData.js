@@ -39,17 +39,24 @@ export default function UserData(){
                 <input type='text' id='email'/>
                 <h3>Password:</h3>
                 <input type='password' id='pwd'/>
-                <button onClick='addData()'>Submit</button>
+                <button onClick={addData}>Submit</button>
             </div>
 
             <table className='user-table'>
                 <thead>Users Data</thead>
                 <tbody>
                     <tr>
+                        <th>Sr.</th>
                         <th>Username</th>
                         <th>Email-id</th>
                         <th>Password</th>
                     </tr>
+                    <tr>
+                            <td>db</td>
+                            <td>db</td>
+                            <td>db</td>
+                            <td>db</td>
+                        </tr>
                     {users.map(data =>{
                         return(
                             <tr>
