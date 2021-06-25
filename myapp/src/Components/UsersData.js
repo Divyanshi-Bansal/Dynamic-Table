@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../assests/styles/Userdata.css';
 
 export default function UserData(){
 
@@ -30,20 +31,22 @@ export default function UserData(){
     return(
         <div className='container'>
 
-            <h2>React Dynamic Table</h2>
+            <h1>React Dynamic Table</h1>
 
-            <div className='user-data'>
-                <h3>Username:</h3>
-                <input type='text' id='name'/>
-                <h3>Email ID:</h3>
-                <input type='text' id='email'/>
-                <h3>Password:</h3>
-                <input type='password' id='pwd'/>
+            <div className='info'>
+                <div className='user-data'>
+                    <h3>Username:</h3>
+                    <input type='text' id='name'/>
+                    <h3>Email ID:</h3>
+                    <input type='text' id='email'/>
+                    <h3>Password:</h3>
+                    <input type='password' id='pwd'/>
+                </div>
                 <button onClick={addData}>Submit</button>
             </div>
 
             <table className='user-table'>
-                <thead>Users Data</thead>
+                <thead><h2>Users Data</h2></thead>
                 <tbody>
                     <tr>
                         <th>Sr.</th>
@@ -51,19 +54,14 @@ export default function UserData(){
                         <th>Email-id</th>
                         <th>Password</th>
                     </tr>
-                    <tr>
-                            <td>db</td>
-                            <td>db</td>
-                            <td>db</td>
-                            <td>db</td>
-                        </tr>
+
                     {users.map(data =>{
                         return(
                             <tr>
-                                <td>data.Sr</td>
-                                <td>data.Username</td>
-                                <td>data.Email</td>
-                                <td>data.password</td>
+                                <td>{data.Sr}</td>
+                                <td>{data.Username}</td>
+                                <td>{data.Email}</td>
+                                <td>{data.password}</td>
                             </tr>
                         );
                     })}
