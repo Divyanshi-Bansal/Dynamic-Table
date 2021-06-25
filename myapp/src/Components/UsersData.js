@@ -10,7 +10,13 @@ export default function UserData(){
         let pwd = document.getElementById('pwd');
 
         if(name.value != '' && email.value != '' && pwd.vaue != ''){
-
+            var data = {
+                Sr:users.length +1,
+                Username:name.value,
+                Email:email.value,
+                password:pwd.value
+            }
+            setUsers(users.concat(data))
         }
         else{
             alert("enter values first!!");
@@ -40,6 +46,12 @@ export default function UserData(){
                         <th>Username</th>
                         <th>Email-id</th>
                         <th>Password</th>
+                    </tr>
+                    <tr>
+                        <td>Sr</td>
+                        <td>Username</td>
+                        <td>Email</td>
+                        <td>password</td>
                     </tr>
                 </tbody>
             </table>
