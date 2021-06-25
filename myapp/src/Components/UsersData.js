@@ -1,22 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function UserData(){
+
+    const [users , setUsers] = useState([]);
+
+    const addData = () => {};
+
     return(
         <div className='container'>
 
             <h2>React Dynamic Table</h2>
 
-            <div className='users'>
+            <div className='user-data'>
                 <h3>Username:</h3>
                 <input type='text' id='name'/>
                 <h3>Email ID:</h3>
                 <input type='text' id='name'/>
                 <h3>Password:</h3>
                 <input type='password' id='name'/>
+                <button onClick='addData()'>Submit</button>
             </div>
 
-            <table>
+            <table className='user-table'>
                 <thead>Users Data</thead>
+                <tbody>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email-id</th>
+                        <th>Password</th>
+                    </tr>
+                </tbody>
             </table>
 
         </div>
